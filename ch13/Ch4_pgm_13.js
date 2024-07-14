@@ -1,48 +1,32 @@
-// A function to display player information
-
-var player1;
-var player2;
-var player;
-var showPlayerInfo;
-
-player1 = {
-    name: "Kandra",
-    place: "The Dungeon of Doom",
-    health: 50
+var showPlayerLocation = function(player) {
+    console.log(player.name + " is in " + player.place);
 };
 
-player2 = {
-    name: "Dax",
-    place: "The Old Library",
-    health: 40
+// Example usage:
+showPlayerLocation(player1); // Outputs: Kandra is in The Dungeon of Doom
+showPlayerLocation(player2); // Outputs: Dax is in The Old Library
+
+var showPlayerHealth = function(player) {
+    console.log(player.name + " has health " + player.health);
 };
 
-showPlayerInfo = function () {
+// Example usage:
+showPlayerHealth(player1); // Outputs: Kandra has health 50
+showPlayerHealth(player2); // Outputs: Dax has health 40
+
+var showPlayerInfo = function(player) {
     console.log(player.name);
     console.log("------------------------------");
-    console.log(player.name + " is in " + player.place);
-    console.log(player.name + " has health " + player.health);
+    showPlayerLocation(player);
+    showPlayerHealth(player);
     console.log("------------------------------");
     console.log("");
 };
 
+// Example usage:
 player = player1;
-showPlayerInfo();
+showPlayerInfo(player1);
 
 player = player2;
-showPlayerInfo();
+showPlayerInfo(player2);
 
-
-
-/* Further Adventures
- *
- * 1) Write a function that just shows
- *    where the player is.
- *
- * 2) Write a function that just shows
- *    the player's health.
- *
- * 3) Change the showPlayerInfo function
- *    to use your two functions.
- *
- */

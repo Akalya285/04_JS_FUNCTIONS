@@ -3,25 +3,22 @@
 var sayHello;
 
 sayHello = function () {
-	console.log("Hello World!");
+    console.log("Hello\nWorld!");
 };
 
 sayHello();
 sayHello();
 sayHello();
 
+// Function to print letters of "Hello World!" down the page
 
+var printLetters;
 
-/* Further Adventures
- *
- * 1) Change the message from the sayHello function.
- *
- * To add a line-break to a string, insert '\n'
- * e.g. "Line One\nLine Two"
- *
- * 2) Break the Hello World! message across two lines.
- *
- * 3) Create a function that prints the letters
- *    of "Hello World!" one by one down the page
- *
- */
+printLetters = function () {
+    var message = "Hello World!";
+    for (var i = 0; i < message.length; i++) {
+        console.log(message[i]);
+    }
+};
+
+printLetters();
